@@ -92,7 +92,7 @@ Write-Host @'
 To publish:
 
   1. Install this exact zip into the Live profile: r2modman -> Settings -> Import local mod. Play a round.
-  2. thunderstore.io/c/holdfast-nations-at-war/ -> Upload, team Ryanlt, pick the Package\ zip.
+  2. thunderstore.io/c/holdfast-nations-at-war/ -> Upload, team Ryannlt, pick the Package\ zip.
   3. Categories: Mods, Client-side.
   4. Commit, push, and tag the release to match.
 

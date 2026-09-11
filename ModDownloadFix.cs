@@ -7,13 +7,13 @@ using HarmonyLib;
 using HoldfastGame;
 
 // Kept in step with BepInPlugin below; package.ps1 reads this back off the built DLL.
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
 
 namespace ModDownloadFix
 {
     // Stops the soft crash when the Workshop popup auto-joins a server after downloading or updating a mod.
-    [BepInPlugin(Guid, "ModDownloadFix", "1.0.0")]
+    [BepInPlugin(Guid, "ModDownloadFix", "1.0.1")]
     public class ModDownloadFixMod : BaseUnityPlugin
     {
         public const string Guid = "com.ryannlt.moddownloadfix";

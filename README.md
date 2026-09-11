@@ -24,9 +24,9 @@ Install through [r2modman](https://r2modman.com/) or Thunderstore Mod Manager. I
 and nobody else on the server needs it.
 
 To install by hand, install
-[BepInExPack](https://thunderstore.io/c/holdfast-nations-at-war/p/BepInEx/BepInExPack/) first, then put
-`ModDownloadFix.dll` from the [latest release](https://github.com/Ryannlt/ModDownloadFix/releases/latest) in
-`BepInEx\plugins\ModDownloadFix\`.
+[BepInExPack_Holdfast](https://thunderstore.io/c/holdfast-nations-at-war/p/HoldfastModding/BepInExPack_Holdfast/)
+first, then put `ModDownloadFix.dll` from the [latest release](https://github.com/Ryannlt/ModDownloadFix/releases/latest)
+in `BepInEx\plugins\ModDownloadFix\`.
 
 ## Did it work?
 
