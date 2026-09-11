@@ -1,0 +1,9 @@
+{
+  "name": "ModDownloadFix",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/Ryannlt/ModDownloadFix",
+  "description": "Fixes the soft crash when the Workshop popup auto-joins a server after downloading or updating a mod.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}

@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    IDE support only. build.ps1 is the real build: it drives csc directly with the same reference list, which
+    avoids needing a targeting pack installed.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>ModDownloadFix</AssemblyName>
+    <RootNamespace>ModDownloadFix</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GameDir>C:\Program Files (x86)\Steam\steamapps\common\Holdfast Nations At War</GameDir>
+    <ManagedDir>$(GameDir)\Holdfast NaW_Data\Managed</ManagedDir>
+    <ProfileName Condition="'$(ProfileName)' == ''">Dev</ProfileName>
+    <BepInExDir>$(APPDATA)\r2modmanPlus-local\HoldfastNationsAtWar\profiles\$(ProfileName)\BepInEx\core</BepInExDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ModDownloadFix.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib">              <HintPath>$(ManagedDir)\mscorlib.dll</HintPath>              </Reference>
+    <Reference Include="System">                <HintPath>$(ManagedDir)\System.dll</HintPath>                </Reference>
+    <Reference Include="System.Core">           <HintPath>$(ManagedDir)\System.Core.dll</HintPath>           </Reference>
+    <Reference Include="netstandard">           <HintPath>$(ManagedDir)\netstandard.dll</HintPath>           </Reference>
+    <Reference Include="UnityEngine">           <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>           </Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath> </Reference>
+    <Reference Include="Assembly-CSharp">       <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>       </Reference>
+    <Reference Include="HoldfastEnums.Runtime"><HintPath>$(ManagedDir)\HoldfastEnums.Runtime.dll</HintPath></Reference>
+    <Reference Include="HoldfastUtils.Runtime"><HintPath>$(ManagedDir)\HoldfastUtils.Runtime.dll</HintPath></Reference>
+    <Reference Include="BepInEx">               <HintPath>$(BepInExDir)\BepInEx.dll</HintPath>              </Reference>
+    <Reference Include="0Harmony">              <HintPath>$(BepInExDir)\0Harmony.dll</HintPath>             </Reference>
+  </ItemGroup>
+
+</Project>
